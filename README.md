@@ -1,5 +1,7 @@
 # PhoenixWebpackBootstrap
 
+This starter template is meant to preserve the original state of a fresh Phoenix app, but use Webpack instead of Brunch.
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`

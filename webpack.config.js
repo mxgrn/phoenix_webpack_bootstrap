@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const config = {
   devtool: "source-map",
   entry: {
-    "app": ["./web/static/css/app.css", "./web/static/js/app.js"],
+    "app": ["./web/static/css/app.scss", "./web/static/js/app.js"],
   },
 
   output: {
@@ -31,6 +31,12 @@ const config = {
       }, {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract("style", "css")
+      }, {
+        test: /\.(scss|sass)$/,
+        loader: ExtractTextPlugin.extract(
+          "style",
+          "css!sass?includePaths[]=" + __dirname +  "/node_modules"
+        )
       }
     ]
   },

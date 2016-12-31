@@ -22,6 +22,10 @@ const config = {
   module: {
     loaders: [
       {
+        test: /\.(ttf|eot|svg|woff2?)$/,
+        loader: 'file?name=fonts/[name].[ext]'
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel",
